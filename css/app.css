@@ -1,5 +1,5 @@
 body {
-  background: url('../img/bg3.jpg') no-repeat center center fixed;
+  background: url('../img/background_75.png') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -17,9 +17,9 @@ h1 {
   width: auto;
 }
 
-img {
+/*img {
   margin-top: 30px;
-}
+}*/
 
 .large-8, .medium-8, .columns{
   text-align: center;
@@ -29,12 +29,23 @@ input[type="text"] {
   width: 300px;
   height: 30px;
   border-radius: 4px;
-  display: block;
   margin: 0 auto;
-  padding-left: 10px;
   font-size: 80%;
   color: #A6A6A6;
+  /*padding-left: 10px;*/
+  /*display: block;*/
 }
+
+
+.wrapper {
+  width:100%;
+  background: #074e68;
+  position: fixed;
+  bottom: 0;
+}
+
+
+
 /*
 .footer {
   position: fixed;
