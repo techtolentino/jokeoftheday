@@ -36,7 +36,7 @@ input[type="text"] {
   /*display: block;*/
 }
 
-.wrapper {
+.footer {
   width:100%;
   background: #5a5554;
   position: fixed;
@@ -44,19 +44,19 @@ input[type="text"] {
   max-height: 69px;
 }
 
-.wrapper p {
+.footer p {
   color: #96ebd5;
   font-size: 12px;
   margin-top: 20px;
   float: left;
 }
 
-.wrapper ul {
+.footer ul {
   margin-top: 20px;
   float: right;
 }
 
-.wrapper li {
+.footer li {
   color: #96ebd5;
   float: left;
   font-size: 12px;
@@ -64,12 +64,18 @@ input[type="text"] {
   margin-right: 10px;
 }
 
-.wrapper li a {
+.footer li a {
   color: #ffffff;
   text-decoration: none;
 }
 
-.wrapper li a:hover {
+.footer li a:hover {
   color: #96ebd5;
   /*text-decoration: none;*/
+}
+
+.small.radius.button {
+  background-color: orange;
+  margin: 5px 5px;
+
 }
