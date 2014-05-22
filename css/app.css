@@ -1,6 +1,6 @@
-* {
+/** {
   border: 1px solid #1bf500;
-}
+}*/
 
 body {
   background: url('../img/background_75.png') no-repeat center center fixed;
@@ -17,8 +17,9 @@ h1 {
 }
 
 .sd {
-  height: 300px;
+  height: 370px;
   width: auto;
+  border-radius: 40px;
 }
 
 .large-8, .medium-8, .columns{

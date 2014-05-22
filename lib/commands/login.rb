@@ -1,6 +1,7 @@
 module Joke
 
-class Login
+  class Login
+
 
   def run(password)
     if password == "makerjoke6"
@@ -9,5 +10,4 @@ class Login
   end
 
 end
-
 end
