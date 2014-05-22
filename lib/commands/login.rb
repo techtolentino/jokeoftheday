@@ -1,7 +1,11 @@
 module Joke
 
-class Login
+  class Login
 
-end
+    def run(input)
+      if input[:password]
+    end
+
+  end
 
 end

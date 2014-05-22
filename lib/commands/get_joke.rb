@@ -1,7 +1,11 @@
 module Joke
 
-class GetJoke
+  class GetJoke
 
-end
+    def run(input)
+
+    end
+
+  end
 
 end
