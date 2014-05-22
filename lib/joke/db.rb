@@ -27,16 +27,27 @@ class Joke::DB
 
   end
 
-  def build_joke
-
+  def build_joke(data)
+    MakeJoke.new(data[:id], data[:joke], data[:answer])
   end
 
-  def create_joke
-
+  def create_joke(data)
+    @db.execute <<-SQL
+      INSERT INTO jokes(joke, answer)
+      VALUES("#{data[:joke]}", "#{data[:answer]}");
+    SQL
+    result = @db.execute <<-SQL
+      SELECT * FROM jokes WHERE id=(SELECT MAX(id) FROM jokes);
+    SQL
+    data[:id] = result.first.first
+    build_joke(data)
   end
 
-  def delete_joke
-
+  def delete_joke(data)
+    @db.execute <<-SQL
+      DELETE FROM jokes WHERE id = #{data[:id]};
+    SQL
+    build_joke(data)
   end
 
 end
@@ -46,5 +57,7 @@ module Joke
     @__db_instance ||= DB.new("app.db")
   end
 end
+
+
 
 
