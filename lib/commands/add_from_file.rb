@@ -1,5 +1,5 @@
 class Joke::AddFromFile
-  def self.run(file_name)
+  def run(file_name)
     # read the file into a string
     # split the string into jokes strings
     # iterate through jokes and split into joke array and answer array
