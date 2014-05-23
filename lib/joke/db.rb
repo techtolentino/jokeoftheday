@@ -29,7 +29,7 @@ class Joke::DB
   end
 
   def build_joke(data)
-    binding.pry
+    # binding.pry
     MakeJoke.new(data[:id], data[:joke], data[:answer])
   end
 

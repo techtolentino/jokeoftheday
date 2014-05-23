@@ -1,14 +1,14 @@
 require 'sinatra'
-require ''
+require 'Joke'
 
 set :bind '0.0.0.0'
 
 get '/main' do
-  erb :main
+  erb :layout
 end
 
 post '/main' do
   puts params
   @password = Joke.new
-  erb :main
+  erb :layout
 end
