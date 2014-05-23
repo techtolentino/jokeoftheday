@@ -1,8 +1,0 @@
-HACKATHON 1
-Joke of the Day App
-
-
-Day 1 - By Lunch Time
-  File structure setup for backend
-  Basic page layout for the front end
-  We have a database
