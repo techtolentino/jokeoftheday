@@ -42,7 +42,7 @@ input[type="text"] {
   background: #5a5554;
   position: fixed;
   bottom: 0;
-  max-height: 69px;
+  max-height: 40px;
 }
 
 .footer p {
@@ -53,7 +53,7 @@ input[type="text"] {
 }
 
 .footer ul {
-  margin-top: 20px;
+  margin-top: 10px;
   float: right;
 }
 
@@ -76,8 +76,15 @@ input[type="text"] {
 }
 
 .small.radius.button {
-  background-color: orange;
+  background-color: #268573;
   margin: 5px 5px;
+  z-index: 1000;
+  font-family: "Arial";
+  color: white;
+  font-size: 1rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+  /*text-shadow: 2px 2px 8px #fff;*/
 
 }
 

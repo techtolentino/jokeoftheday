@@ -24,7 +24,7 @@ Two: one holds, the other installs Windows on it.
 ~~~~
 Have you heard the one about an SQL query walking into a bar?
 ~~
-It walked up to two tables and asked, "Can I join you?"
+It walked up to two tables and asked, 'Can I join you?'
 ~~~~
 How many Northern Californians does it take to screw in a lightbulb?
 ~~
@@ -37,5 +37,3 @@ What is long and hard to a blonde?
 Why did Beethoven kill his chicken?
 ~~
 It kept saying ''Bach, Bach, Bach...''
-~~~~
-

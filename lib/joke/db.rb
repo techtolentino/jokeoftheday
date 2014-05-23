@@ -30,10 +30,13 @@ class Joke::DB
 
   def build_joke(data)
     # binding.pry
-    MakeJoke.new(data[:id], data[:joke], data[:answer])
+    Joke::MakeJoke.new(data[:id], data[:joke], data[:answer])
   end
 
   def create_joke(data)
+    # use binding.pry here to see that data[:joke] and
+    # data[:answer] are what you think they should be
+    # before you insert them into the database
     @db.execute <<-SQL
       INSERT INTO jokes(joke, answer)
       VALUES("#{data[:joke]}", "#{data[:answer]}");
@@ -49,6 +52,18 @@ class Joke::DB
     @db.execute <<-SQL
       DELETE FROM jokes WHERE id = #{data[:id]};
     SQL
+    build_joke(data)
+  end
+
+  def get_last_joke
+    data = {}
+    result = @db.execute <<-SQL
+      SELECT * FROM jokes WHERE id=(SELECT MAX(id) FROM jokes);
+    SQL
+    # binding.pry
+    data[:id] = result[0][0]
+    data[:joke] = result[0][1]
+    data[:answer] = result[0][2]
     build_joke(data)
   end
 

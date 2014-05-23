@@ -1,5 +1,7 @@
+require "pry-debugger"
+
 class Joke::AddFromFile
-  def run(file_name)
+  def self.run(file_name)
     # read the file into a string
     # split the string into jokes strings
     # iterate through jokes and split into joke array and answer array
@@ -9,6 +11,7 @@ class Joke::AddFromFile
     jokes_array.each do |joke|
       j = joke.split("\n~~\n")
       joke_hash = {joke: j.first, answer: j.last}
+      # binding.pry
       Joke.db.create_joke(joke_hash)
     end
   end
