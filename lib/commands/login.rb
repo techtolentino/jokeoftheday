@@ -2,10 +2,12 @@ module Joke
 
   class Login
 
-    def run(input)
-      if input[:password]
-    end
 
+  def run(password)
+    if password == "makerjoke6"
+      {success?: true}
+    end
   end
 
+end
 end
