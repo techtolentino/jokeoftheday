@@ -1,3 +1,4 @@
+require 'pry-debugger'
 class Joke::DB
 
   def initialize(file)
@@ -28,6 +29,7 @@ class Joke::DB
   end
 
   def build_joke(data)
+    binding.pry
     MakeJoke.new(data[:id], data[:joke], data[:answer])
   end
 
