@@ -1,14 +1,16 @@
 require 'sinatra'
-require 'Joke'
+require 'rubygems'
+# require 'Joke'
 
-set :bind '0.0.0.0'
+set :bind, '0.0.0.0'
 
-get '/main' do
-  erb :layout
+get '/' do
+  # erb :layout
+  File.read(File.join('views', 'layout.erb'))
 end
 
 post '/main' do
-  puts params
-  @password = Joke.new
-  erb :layout
+  # puts params
+  # @password = Joke.new
+  # erb :layout
 end
