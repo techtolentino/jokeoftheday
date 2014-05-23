@@ -8,7 +8,7 @@ get '/' do
   erb :layout
 end
 
-post '/main' do
+post '/' do
   # puts params
   # @password = Joke.new
   # erb :layout
