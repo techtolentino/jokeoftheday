@@ -5,8 +5,7 @@ require 'rubygems'
 set :bind, '0.0.0.0'
 
 get '/' do
-  # erb :layout
-  File.read(File.join('views', 'layout.erb'))
+  erb :layout
 end
 
 post '/main' do
