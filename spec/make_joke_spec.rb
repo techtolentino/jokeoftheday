@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "add_joke" do
+describe "make_joke" do
   before(:each) do
     @j = Joke::MakeJoke.new(1, "Why did the chicken cross the road?", "To get to the other side")
   end
