@@ -1,7 +1,7 @@
 require 'sinatra'
 require 'Joke'
 
-set :bind '0.0.0.0'
+set :bind, '0.0.0.0'
 
 get '/main' do
   erb :layout
