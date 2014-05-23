@@ -9,7 +9,7 @@ get '/' do
   File.read(File.join('views', 'layout.erb'))
 end
 
-post '/main' do
+post '/' do
   # puts params
   # @password = Joke.new
   # erb :layout
