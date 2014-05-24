@@ -67,6 +67,17 @@ class Joke::DB
     build_joke(data)
   end
 
+  def get_random
+    data = {}
+    result = @db.execute <<-SQL
+      SELECT * FROM jokes ORDER BY RANDOM() LIMIT 1;
+    SQL
+    data[:id] = result[0][0]
+    data[:joke] = result[0][1]
+    data[:answer] = result[0][2]
+    build_joke(data)
+  end
+
 end
 
 module Joke
@@ -74,7 +85,3 @@ module Joke
     @__db_instance ||= DB.new("app.db")
   end
 end
-
-
-
-

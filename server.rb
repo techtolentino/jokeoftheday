@@ -8,6 +8,9 @@ set :bind, '0.0.0.0'
 get '/' do
   joke = Joke::GetJokeOfTheDay.new.run
   @joke = joke.joke
+
+  random = Joke::GetRandomJoke.new.run
+  @joke_random = random.joke
   erb :homepage
 end
 
@@ -16,4 +19,10 @@ get '/test' do
   joke = Joke::GetJokeOfTheDay.new.run
   @joke = joke.joke
   erb :test
+end
+
+get '/random' do
+  random = Joke::GetRandomJoke.new.run
+  @joke_random = random.joke
+  erb :random
 end
