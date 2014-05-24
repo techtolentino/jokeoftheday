@@ -26,17 +26,6 @@ h1 {
   text-align: center;
 }
 
-input[type="text"] {
-  width: 200px;
-  height: 25px;
-  border-radius: 4px;
-  margin: 0 auto;
-  font-size: 80%;
-  color: #A6A6A6;
-  /*padding-left: 10px;*/
-  /*display: block;*/
-}
-
 .footer {
   width:100%;
   background: #5a5554;
@@ -72,7 +61,6 @@ input[type="text"] {
 
 .footer li a:hover {
   color: #96ebd5;
-  /*text-decoration: none;*/
 }
 
 .small.radius.button {
@@ -84,8 +72,6 @@ input[type="text"] {
   font-size: 1rem;
   padding: 5px 10px;
   border-radius: 5px;
-  /*text-shadow: 2px 2px 8px #fff;*/
-
 }
 
 .modalDialog {
@@ -116,9 +102,6 @@ input[type="text"] {
   padding: 5px 20px 13px 20px;
   border-radius: 10px;
   background: #fff;
-/*  background: -moz-linear-gradient(#fff, #999);
-  background: -webkit-linear-gradient(#fff, #999);
-  background: -o-linear-gradient(#fff, #999);*/
 }
 
 .close {
