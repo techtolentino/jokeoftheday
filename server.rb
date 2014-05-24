@@ -6,14 +6,11 @@ require_relative "./lib/joke.rb"
 set :bind, '0.0.0.0'
 
 get '/' do
+  joke = Joke::GetJokeOfTheDay.new.run
+  @joke = joke.joke
   erb :homepage
 end
 
-post '/' do
-  # puts params
-  # @password = Joke.new
-  # erb :layout
-end
 
 get '/test' do
   joke = Joke::GetJokeOfTheDay.new.run

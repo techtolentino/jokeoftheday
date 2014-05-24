@@ -15,18 +15,15 @@
 
 <div class="row">
   <div class="large-12 columns">
-  <a href="#openModal" class="small radius button">Joke of the Day</a>
-
-  <a href="#openModal" class="small radius button">Random Joke</a>
-
-  <div id="openModal" class="modalDialog">
-    <div>
-      <a href="#close" title="Close" class="close">X</a>
-      <h4>Joke</h4>
-    <form method="post" action="/main"><label for="password"><h4>Answer</h4>
-      <!-- <input type="text" name="password"></label></form> -->
+    <a href="#openModal" class="small radius button">Joke of the Day</a>
+    <a href="#openModal" class="small radius button">Random Joke</a>
+    <div id="openModal" class="modalDialog">
+      <div>
+        <a href="#close" title="Close" class="close" method="get" action="/">X</a>
+        <h4 class="answer"><%= @joke.joke %></h4>
+        <hr noshade size=3>
+        <h4 class="answer"><%= @joke.answer %></h4>
+      </div>
     </div>
-  </div>
-
   </div>
 </div>
