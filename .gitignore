@@ -2,3 +2,4 @@
 vendor/bundle
 .DS_Store
 lib/joke/db.rb
+app.db
