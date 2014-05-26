@@ -1,4 +1,5 @@
 require "ostruct"
+require "bcrypt"
 
 module Joke
   class Login
@@ -8,6 +9,8 @@ module Joke
         return { success?: false,
           error: "Incorrect username" }
       end
+
+      # password = BCrypt::Password.create(password)
 
       if password != user.password
         return { success?: false,
