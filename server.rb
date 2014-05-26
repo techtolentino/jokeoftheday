@@ -23,15 +23,16 @@ post '/' do
   # @name = user.username
   # @pass = user.password
   # erb :signin
-  @name = params[:username]
-  @pass = params[:password]
-  @result = Joke::Login.run(@name, @pass)
+  # @name = params[:user]
+  # @pass = params[:pwd]
 
-  if @result[:success?]
-    session[:username] =@result[:username]
+  result = Joke::Login.run(params[:user], params[:pwd])
+
+  if result[:success?]
+    session[:username] = result[:user]
     redirect to '/add_joke'
   else
-    session[:error] = @result[:error]
+    session[:error] = result[:error]
     redirect to '/'
   end
 end

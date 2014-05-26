@@ -1,7 +1,6 @@
 require "ostruct"
 
 module Joke
-
   class Login
     def self.run(username, password)
       user = Joke.db.get_user_by_username(username)
