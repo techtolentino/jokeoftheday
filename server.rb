@@ -14,6 +14,10 @@ get '/' do
   erb :homepage
 end
 
+get '/add_joke' do
+  erb :add_joke
+end
+
 post '/' do
   # user = Joke::Login.new.run(username, password)
   # @name = user.username
