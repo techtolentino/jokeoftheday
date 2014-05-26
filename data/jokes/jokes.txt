@@ -1,51 +1,21 @@
-Why is it that programmers always confuse Halloween with Christmas?
-~~
-Because 31 OCT = 25 DEC.
-~~~~
-Whats JavaScript’s favorite Indian food?
-~~
-NaN.
-~~~~
-Whats the object-oriented way to become wealthy?
-~~
-Inheritance.
-~~~~
-Why are Ruby programmers always single?
-~~
-Because they always treat people like objects
-~~~~
-Why are Assembly programmers always soaking wet?
-~~
-They work below C-level.
-~~~~
-Whats HTMLs favorite meal of the day?
-~~
-<br/>fast
-~~~~
-Why did the programmer quit his job?
-~~
-Because he didn't get arrays.
-~~~~
-Why do java programmers have to wear glasses?
-~~
-Because they don't see sharp.
-~~~~
-How many programmers does it take to kill a cockroach?
-~~
-Two: one holds, the other installs Windows on it.
-~~~~
-Have you heard the one about an SQL query walking into a bar?
-~~
-It walked up to two tables and asked, 'Can I join you?'
-~~~~
-How many Northern Californians does it take to screw in a lightbulb?
-~~
-Hella.
-~~~~
-What is long and hard to a blonde?
-~~
-4th grade.
-~~~~
-Why did Beethoven kill his chicken?
-~~
-It kept saying ''Bach, Bach, Bach...''
+1|Why is it that programmers always confuse Halloween with Christmas?|Because 31 OCT = 25 DEC.
+2|What is JavaScript's favorite Indian food?|NaN.
+3|Whats the object-oriented way to become wealthy?|Inheritance.
+4|Why are Ruby programmers always single?|Because they always treat people like objects
+5|Why are Assembly programmers always soaking wet?|They work below C-level.
+6|Whats HTMLs favorite meal of the day?|<br/>fast
+7|Why did the programmer quit his job?|Because he didn't get arrays.
+8|Why do java programmers have to wear glasses?|Because they don't see sharp.
+9|How many programmers does it take to kill a cockroach?|Two: one holds, the other installs Windows on it.
+10|Have you heard the one about an SQL query walking into a bar?|It walked up to two tables and asked, 'Can I join you?'
+11|How many Northern Californians does it take to screw in a lightbulb?|Hella.
+12|What is long and hard to a blonde?|4th grade.
+13|Why did Beethoven kill his chicken?|It kept saying ''Bach, Bach, Bach...''
+
+14|What was Beethoven's favorite fruit?|BANANANAAAAAA!
+15|What's red and smells like blue paint?|Red paint.
+16|Two blondes fell down a hole. One said, 'It's dark in here isn't it?'|The other replied, 'I don't know; I can't see.'
+17|A neutron walks into a bar and says, 'I'd like a beer. How much will that be?'|The bartender responds, 'For you? No charge!'
+18|Celine Dion walks into a bar.|The bartender asks, 'Why the long face?'
+19|What do you call a fish with no eye?|A fsh.
+20|How many tutors does it take to make a wild dog literate?|It takes two to make a dingo write.

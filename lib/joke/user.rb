@@ -1,9 +1,9 @@
 class Joke::User
-  attr_reader :id, :name, :password
+  attr_reader :id, :username, :password
 
-  def initialize(id, name, password)
+  def initialize(id, username, password)
     @id = id
-    @name = name
+    @username = username
     @password = password
   end
 

@@ -75,16 +75,30 @@ class Joke::DB
     Joke::User.new(data[:id], data[:name], data[:password])
   end
 
-  def get_user_by_username(data)
-    result = @db.execute <<-SQL
-      SELECT * FROM users WHERE username = "#{data[:username]}";
+  def create_user(data)
+    @db.execute <<-SQL
+      INSERT INTO users(username. password)
+      VALUES("#{data[:username]}", "#{data[:password]}")
     SQL
 
-    return false if data[:username].nil?
+    result = @db.execute <<-SQL
+      SELECT * FROM jokes WHERE id=(SELECT MAX(id) FROM jokes);
+    SQL
+    data[:id] = result.first.first
+    build_user(data)
+  end
+
+  def get_user_by_username(username)
+    data = {}
+    result = @db.execute <<-SQL
+      SELECT * FROM users WHERE username = "#{username}";
+    SQL
 
     data[:id] = result[0][0]
     data[:username] = result[0][1]
     data[:password] = result[0][2]
+
+    return false if data[:username].nil?
     build_user(data)
   end
 
