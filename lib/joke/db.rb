@@ -12,19 +12,11 @@ class Joke::DB
       SQL
 
     @db.execute <<-SQL
-      CREATE TABLE IF NOT EXISTS categories(
+      CREATE TABLE IF NOT EXISTS users(
         id integer PRIMARY KEY AUTOINCREMENT,
-        type string);
-    SQL
-
-    @db.execute <<-SQL
-      CREATE TABLE IF NOT EXISTS joke_categories(
-        id integer PRIMARY KEY AUTOINCREMENT,
-        category_id integer,
-        joke_id integer,
-        FOREIGN KEY(joke_id) REFERENCES jokes(id)
-        );
-    SQL
+        username string,
+        password string);
+      SQL
 
   end
 
@@ -48,12 +40,13 @@ class Joke::DB
     build_joke(data)
   end
 
-  def delete_joke(data)
-    @db.execute <<-SQL
-      DELETE FROM jokes WHERE id = #{data[:id]};
-    SQL
-    build_joke(data)
-  end
+  # delete this method??
+  # def delete_joke(data)
+  #   @db.execute <<-SQL
+  #     DELETE FROM jokes WHERE id = #{data[:id]};
+  #   SQL
+  #   build_joke(data)
+  # end
 
   def get_last_joke
     data = {}
@@ -76,6 +69,37 @@ class Joke::DB
     data[:joke] = result[0][1]
     data[:answer] = result[0][2]
     build_joke(data)
+  end
+
+  def build_user(data)
+    Joke::User.new(data[:id], data[:name], data[:password])
+  end
+
+  def create_user(data)
+    @db.execute <<-SQL
+      INSERT INTO users(username. password)
+      VALUES("#{data[:username]}", "#{data[:password]}")
+    SQL
+
+    result = @db.execute <<-SQL
+      SELECT * FROM jokes WHERE id=(SELECT MAX(id) FROM jokes);
+    SQL
+    data[:id] = result.first.first
+    build_user(data)
+  end
+
+  def get_user_by_username(username)
+    data = {}
+    result = @db.execute <<-SQL
+      SELECT * FROM users WHERE username = "#{username}";
+    SQL
+
+    data[:id] = result[0][0]
+    data[:username] = result[0][1]
+    data[:password] = result[0][2]
+
+    return false if data[:username].nil?
+    build_user(data)
   end
 
 end

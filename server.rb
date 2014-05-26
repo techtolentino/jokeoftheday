@@ -12,6 +12,9 @@ get '/' do
   random = Joke::GetRandomJoke.new.run
   @joke_random = random.joke
   erb :homepage
+
+  # user = Joke::Login.new.run(username, password)
+  # erb :signin
 end
 
 
