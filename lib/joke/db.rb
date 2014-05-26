@@ -89,13 +89,13 @@ class Joke::DB
   end
 
   def get_user_by_username(username)
-    data = {}
+    username = {}
     result = @db.execute <<-SQL
       SELECT * FROM users WHERE username = "#{username}";
     SQL
-    data[:id] = result[0][0]
-    data[:username] = result[0][1]
-    data[:password] = result[0][2]
+    username[:id] = result[0][0]
+    username[:username] = result[0][1]
+    username[:password] = result[0][2]
 
     return false if data[:username].nil?
     build_user(data)
