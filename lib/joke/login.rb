@@ -1,7 +1,7 @@
 class Joke::Login
   attr_reader :password
 
-  def initialize(password="shit")
+  def initialize(password)
     @password = password
   end
 

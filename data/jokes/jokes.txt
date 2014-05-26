@@ -2,13 +2,25 @@ Why is it that programmers always confuse Halloween with Christmas?
 ~~
 Because 31 OCT = 25 DEC.
 ~~~~
+Whats JavaScript’s favorite Indian food?
+~~
+NaN.
+~~~~
 Whats the object-oriented way to become wealthy?
 ~~
 Inheritance.
 ~~~~
+Why are Ruby programmers always single?
+~~
+Because they always treat people like objects
+~~~~
 Why are Assembly programmers always soaking wet?
 ~~
 They work below C-level.
+~~~~
+Whats HTMLs favorite meal of the day?
+~~
+<br/>fast
 ~~~~
 Why did the programmer quit his job?
 ~~
