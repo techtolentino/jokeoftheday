@@ -40,14 +40,6 @@ class Joke::DB
     build_joke(data)
   end
 
-  # delete this method??
-  # def delete_joke(data)
-  #   @db.execute <<-SQL
-  #     DELETE FROM jokes WHERE id = #{data[:id]};
-  #   SQL
-  #   build_joke(data)
-  # end
-
   def get_last_joke
     data = {}
     result = @db.execute <<-SQL
@@ -72,7 +64,7 @@ class Joke::DB
   end
 
   def build_user(data)
-    Joke::User.new(data[:id], data[:name], data[:password])
+    Joke::User.new(data[:id], data[:username], data[:password])
   end
 
   def create_user(data)
@@ -89,13 +81,16 @@ class Joke::DB
   end
 
   def get_user_by_username(username)
-    username = {}
+
+    data = {}
+
     result = @db.execute <<-SQL
-      SELECT * FROM users WHERE username = "#{username}";
+      SELECT * FROM users WHERE username = '#{username}';
     SQL
-    username[:id] = result[0][0]
-    username[:username] = result[0][1]
-    username[:password] = result[0][2]
+
+    data[:id] = result[0][0]
+    data[:username] = result[0][1]
+    data[:password] = result[0][2]
 
     return false if data[:username].nil?
     build_user(data)
