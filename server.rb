@@ -15,14 +15,14 @@ get '/' do
 end
 
 
-get '/test' do
-  joke = Joke::GetJokeOfTheDay.new.run
-  @joke = joke.joke
-  erb :test
-end
+# get '/test' do
+#   joke = Joke::GetJokeOfTheDay.new.run
+#   @joke = joke.joke
+#   erb :test
+# end
 
-get '/random' do
-  random = Joke::GetRandomJoke.new.run
-  @joke_random = random.joke
-  erb :random
-end
+# get '/random' do
+#   random = Joke::GetRandomJoke.new.run
+#   @joke_random = random.joke
+#   erb :random
+# end

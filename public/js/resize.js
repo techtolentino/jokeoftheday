@@ -5,12 +5,12 @@
         var w = +$(window).width();
         var $sd = $('.sd');
         if (w > 800) {
-          var sdHeight = w / 5;
+          sdHeight = w / 5;
         } else if (w < 800) {
-          var sdHeight = w / 2.5;
+          sdHeight = w / 2.5;
         }
 
-        console.log("this Shehzan height ", sdHeight);
+        console.log("this is Shehzan's image height ", sdHeight);
         $sd.css({'height': sdHeight });
       };
 
