@@ -12,9 +12,24 @@ get '/' do
   random = Joke::GetRandomJoke.new.run
   @joke_random = random.joke
   erb :homepage
+end
 
+post '/' do
   # user = Joke::Login.new.run(username, password)
+  # @name = user.username
+  # @pass = user.password
   # erb :signin
+  @name = params[:username]
+  @pass = params[:password]
+  @result = Joke::Login.run(@name, @pass)
+
+  if @result[:success?]
+    session[:username] =@result[:username]
+    redirect to '/add_joke'
+  else
+    session[:error] = @result[:error]
+    redirect to '/'
+  end
 end
 
 

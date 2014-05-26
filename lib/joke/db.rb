@@ -77,12 +77,12 @@ class Joke::DB
 
   def create_user(data)
     @db.execute <<-SQL
-      INSERT INTO users(username. password)
+      INSERT INTO users(username, password)
       VALUES("#{data[:username]}", "#{data[:password]}")
     SQL
 
     result = @db.execute <<-SQL
-      SELECT * FROM jokes WHERE id=(SELECT MAX(id) FROM jokes);
+      SELECT * FROM users WHERE id=(SELECT MAX(id) FROM jokes);
     SQL
     data[:id] = result.first.first
     build_user(data)
@@ -93,7 +93,6 @@ class Joke::DB
     result = @db.execute <<-SQL
       SELECT * FROM users WHERE username = "#{username}";
     SQL
-
     data[:id] = result[0][0]
     data[:username] = result[0][1]
     data[:password] = result[0][2]
