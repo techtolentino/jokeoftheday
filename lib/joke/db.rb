@@ -83,7 +83,6 @@ class Joke::DB
   def get_user_by_username(username)
 
     data = {}
-
     result = @db.execute <<-SQL
       SELECT * FROM users WHERE username = '#{username}';
     SQL
