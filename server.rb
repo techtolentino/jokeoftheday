@@ -1,7 +1,8 @@
 require 'sinatra'
 require 'rubygems'
-# require_relative "./lib/commands/get_joke_of_the_day.rb"
+require "warden"
 require_relative "./lib/joke.rb"
+
 
 set :bind, '0.0.0.0'
 
@@ -14,15 +15,7 @@ get '/' do
   erb :homepage
 end
 
-
 post '/' do
-  # user = Joke::Login.new.run(username, password)
-  # @name = user.username
-  # @pass = user.password
-  # erb :signin
-  # @name = params[:user]
-  # @pass = params[:pwd]
-
   result = Joke::Login.run(params[:user], params[:pwd])
 
   if result[:success?]
