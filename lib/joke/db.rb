@@ -26,9 +26,6 @@ class Joke::DB
   end
 
   def create_joke(data)
-    # use binding.pry here to see that data[:joke] and
-    # data[:answer] are what you think they should be
-    # before you insert them into the database
     @db.execute <<-SQL
       INSERT INTO jokes(joke, answer)
       VALUES("#{data[:joke]}", "#{data[:answer]}");
@@ -45,7 +42,6 @@ class Joke::DB
     result = @db.execute <<-SQL
       SELECT * FROM jokes WHERE id=(SELECT MAX(id) FROM jokes);
     SQL
-    # binding.pry
     data[:id] = result[0][0]
     data[:joke] = result[0][1]
     data[:answer] = result[0][2]

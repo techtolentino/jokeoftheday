@@ -5,7 +5,6 @@ require_relative "./lib/joke.rb"
 
 enable :sessions
 
-
 set :bind, '0.0.0.0'
 
 get '/' do
