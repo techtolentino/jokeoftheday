@@ -1,7 +1,8 @@
 require 'sinatra'
 require 'rubygems'
-# require_relative "./lib/commands/get_joke_of_the_day.rb"
+require "warden"
 require_relative "./lib/joke.rb"
+
 
 set :bind, '0.0.0.0'
 
@@ -14,18 +15,7 @@ get '/' do
   erb :homepage
 end
 
-get '/add_joke' do
-  erb :add_joke
-end
-
 post '/' do
-  # user = Joke::Login.new.run(username, password)
-  # @name = user.username
-  # @pass = user.password
-  # erb :signin
-  # @name = params[:user]
-  # @pass = params[:pwd]
-
   result = Joke::Login.run(params[:user], params[:pwd])
 
   if result[:success?]
@@ -37,15 +27,16 @@ post '/' do
   end
 end
 
+get '/add_joke' do
+  erb :add_joke
+end
 
-# get '/test' do
-#   joke = Joke::GetJokeOfTheDay.new.run
-#   @joke = joke.joke
-#   erb :test
-# end
+post '/add_joke' do
+  data = {
+    joke: params[:question],
+    answer: params[:answer]
+  }
+  j = Joke::AddJoke.new.run(data)
+  redirect to '/'
+end
 
-# get '/random' do
-#   random = Joke::GetRandomJoke.new.run
-#   @joke_random = random.joke
-#   erb :random
-# end

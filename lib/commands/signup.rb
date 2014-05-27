@@ -1,0 +1,3 @@
+class Joke::Signup
+
+end
