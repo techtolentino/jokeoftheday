@@ -14,9 +14,6 @@ get '/' do
   erb :homepage
 end
 
-get '/add_joke' do
-  erb :add_joke
-end
 
 post '/' do
   # user = Joke::Login.new.run(username, password)
@@ -35,6 +32,19 @@ post '/' do
     session[:error] = result[:error]
     redirect to '/'
   end
+end
+
+get '/add_joke' do
+  erb :add_joke
+end
+
+post '/add_joke' do
+  data = {
+    joke: params[:question],
+    answer: params[:answer]
+  }
+  j = Joke::AddJoke.new.run(data)
+  redirect to '/'
 end
 
 
