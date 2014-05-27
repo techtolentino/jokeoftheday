@@ -15,7 +15,7 @@ get '/' do
   erb :homepage
 end
 
-post '/' do
+post '/signin' do
   result = Joke::Login.run(params[:user], params[:pwd])
 
   if result[:success?]
@@ -29,6 +29,10 @@ end
 
 get '/add_joke' do
   erb :add_joke
+end
+
+get '/signin' do
+  erb :signin
 end
 
 post '/add_joke' do

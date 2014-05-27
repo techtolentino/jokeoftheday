@@ -117,7 +117,7 @@ h1 {
   font-family: 'Quattrocento Sans', sans-serif;
   color: #ffffff;
   font-size: 1rem;
-  padding: 5px 10px;
+  padding: 10px 15px;
   border-radius: 5px;
   position: relative;
   top: 50px;
@@ -130,12 +130,12 @@ h1 {
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,5,0,0.6);
   z-index: 99999;
   opacity:0;
-  -webkit-transition: opacity 300ms ease-in;
-  -moz-transition: opacity 300ms ease-in;
-  transition: opacity 300ms ease-in;
+  -webkit-transition: opacity 500ms ease-in;
+  -moz-transition: opacity 500ms ease-in;
+  transition: opacity 500ms ease-in;
   pointer-events: none;
 }
 
@@ -145,8 +145,9 @@ h1 {
 }
 
 .modalDialog > div {
-  width: 300px;
+  width: 350px;
   position: relative;
+  top: 100px;
   margin: 10% auto;
   padding: 5px 20px 13px 20px;
   border-radius: 10px;
@@ -178,7 +179,7 @@ h1 {
   background: #00d9ff;
 }
 
-.answer {
+.answer, h4, h5, h6 {
   color: #268573;
 }
 
@@ -194,8 +195,10 @@ h1 {
   font-family: 'Quattrocento Sans', sans-serif;
   color: white;
   font-size: 1rem;
-  padding: 5px 10px;
+  padding: 10px 15px;
   border-radius: 5px;
+  border: none;
+  cursor: pointer;
 }
 
 .add_joke {
