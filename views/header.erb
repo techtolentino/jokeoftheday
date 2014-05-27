@@ -1,18 +1,21 @@
 <div class="header">
   <div class="row">
     <ul style="margin-left: 0px;">
+    	<li><a href="/">HOME</a></li>
       <li>
-      	<a href="#loginModal">LOGIN</a>
+      	<!-- switched to signin.erb because of double-popups.
+      	to return back to original, rever to href=#loginModal -->
+      	<a href="/signin">LOGIN</a>
       	<div id="loginModal" class="modalDialog">
       		<div>
-						<a href="/" title="Close" class="close" method="get" action="/">X</a>
+						<a href="/" title="Close" class="close">X</a>
 						<br>
 						<form class="user" action"/" method="post">
             <h4 class="password">USERNAME</h4>
-            <input type="text" name="user"></input>
+            <input type="text" name="user">
             <h4 class="password">PASSWORD</h4>
-						<input type="password" name="pwd" class="password"></input>
-						<input type="submit" value="Submit" class="submit" method= "get" action="/add_joke"></input>
+						<input type="password" name="pwd" class="password">
+						<input type="submit" value="Submit" class="submit">
 						</form>
 					</div>
 				</div>
@@ -23,9 +26,9 @@
 				<div id="aboutModal" class="modalDialog">
 					<div>
 						<a href="/" title="Close" class="close" method="get" action="/">X</a>
-						<h2>ABOUT</h2>
+						<h5>ABOUT</h5>
 						<hr>
-						<p>test test</p>
+						<h6>With MKS Instructor moving from Austin to San Francisco, Cohort 6 still needed a way to receive their daily dose of humor. Shehzan's Joke of the Day app is intended to serve that purpose, to keep students laughing as they prepare for long hours of coding! </h6>
 					</div>
 				</div>
       </li>
