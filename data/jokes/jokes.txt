@@ -3,7 +3,7 @@
 3|Whats the object-oriented way to become wealthy?|Inheritance.
 4|Why are Ruby programmers always single?|Because they always treat people like objects
 5|Why are Assembly programmers always soaking wet?|They work below C-level.
-6|Whats HTMLs favorite meal of the day?|<br/>fast
+6|Whats HTMLs favorite meal of the day?|'<br/>fast'
 7|Why did the programmer quit his job?|Because he didn't get arrays.
 8|Why do java programmers have to wear glasses?|Because they don't see sharp.
 9|How many programmers does it take to kill a cockroach?|Two: one holds, the other installs Windows on it.

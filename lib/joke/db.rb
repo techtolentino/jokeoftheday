@@ -86,7 +86,7 @@ class Joke::DB
     result = @db.execute <<-SQL
       SELECT * FROM users WHERE username = '#{username}';
     SQL
-
+    binding.pry
     data[:id] = result[0][0]
     data[:username] = result[0][1]
     data[:password] = result[0][2]
