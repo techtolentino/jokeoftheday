@@ -7,7 +7,7 @@ class AddJoke
   def run(input)
     joke = Joke.db.create_joke(joke: input[:joke], answer: input[:answer])
 
-    if joke.length < 1
+    if joke.nil?
       return {success?: false, error: "Database couldn't store joke."}
     end
 
